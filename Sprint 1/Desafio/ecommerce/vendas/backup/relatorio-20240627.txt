@@ -1,0 +1,18 @@
+2024/06/27 15:27
+Data do primeiro registro: 21/01/2023
+Data do ultimo registro: 08/03/2023
+Quantidade Total de itens: 654
+Quantidade Total de Registros: 66
+Quantidade de Itens Diferentesl: 12
+Primeiros 10 registros: 
+
+1,relógio,2,183.13,21/01/2023
+2,cinto,8,16.95,28/11/2023
+3,óculos,17,90.92,28/02/2023
+4,cinto,3,13.4,24/02/2023
+5,meia,17,6.18,26/11/2023
+6,vestido,10,70.26,04/07/2023
+7,relógio,18,74.32,28/09/2023
+8,cinto,5,20.54,09/05/2023
+9,vestido,3,108.96,18/03/2023
+10,meia,13,6.72,01/04/2023

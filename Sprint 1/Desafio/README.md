@@ -1,17 +1,14 @@
-
 # Instruções
 
-
-Neste arquivo você irá apresentar suas entregas referentes ao desafio final. 
-O desafio está presente em cada sprint ao longo do estágio. Utilize o diretório "Desafio" para organizar seus artefatos e este README.md para fazer referência aos arquivos de código-fonte e demais entregáveis solicitados.
-
+Nestes arquivos abaixo estao as explicacoes dos comandos utilizados nos arquivos e as instrucoes de execucao de cada etapa
 
 # Etapas
 
+1. Criar um arquivo executavel:
+   [Etapa I](etapa-1/codigos.md)
 
-1. ...
-[Etapa I](etapa-1/entrega.txt)
+2. Agendar a execucao do processamento:
+   [Etapa II](etapa-2/codigos.md)
 
-
-2. ...
-[Etapa II](etapa-2/entrega.txt)
+3. Criar novo relatorio:
+   [Etapa III](etapa-3/codigos.md)

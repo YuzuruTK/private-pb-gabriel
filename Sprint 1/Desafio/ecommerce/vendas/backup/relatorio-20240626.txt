@@ -1,0 +1,18 @@
+2024/06/26 15:27
+Data do primeiro registro: 16/09/2023
+Data do ultimo registro: 20/06/2023
+Quantidade Total de itens: 682
+Quantidade Total de Registros: 66
+Quantidade de Itens Diferentesl: 12
+Primeiros 10 registros: 
+
+1,camiseta,13,39.34,16/09/2023
+2,relógio,11,157.51,15/07/2023
+3,meia,4,9.21,07/06/2023
+4,bolsa,20,81.06,30/09/2023
+5,calça,6,109.7,14/02/2023
+6,calça,12,116.08,01/04/2023
+7,vestido,16,142.24,29/07/2023
+8,relógio,7,58.29,05/04/2023
+9,chapéu,18,26.27,09/03/2023
+10,carteira,11,44.73,09/12/2023
