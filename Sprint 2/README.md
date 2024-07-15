@@ -51,5 +51,5 @@ Modelo Relacional Logico da Base Loja
 
 # Certificados
 
-- Certificado do Curso ABC
-  ![Curso ABC](certificados/sample.png)
+- Certificado do Curso de Sales Accreditation
+  ![Sales Accreditation](certificados/sales_accreditation.png)
