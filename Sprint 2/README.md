@@ -1,6 +1,7 @@
 # Exercícios
 
 ## Exercícios referentes ao Caso de Estudo 'Biblioteca'
+
 - [Resposta Ex1.](exercicios/ex1.sql)
 - [Resposta Ex2.](exercicios/ex2.sql)
 - [Resposta Ex3.](exercicios/ex3.sql)
@@ -10,6 +11,7 @@
 - [Resposta Ex7.](exercicios/ex7.sql)
 
 ## Exercícios referentes ao Caso de Estudo 'Loja'
+
 - [Resposta Ex8.](exercicios/ex8.sql)
 - [Resposta Ex9.](exercicios/ex9.sql)
 - [Resposta Ex10.](exercicios/ex10.sql)
@@ -20,20 +22,16 @@
 - [Resposta Ex15.](exercicios/ex15.sql)
 - [Resposta Ex16.](exercicios/ex16.sql)
 
-
 ## Seção 6: Exercicios II
+
 1. Etapa 1
-    - [CSV Etapa 1](exercicios/ExercicioEtapa1.csv)
+   - [CSV Etapa 1](exercicios/ExercicioEtapa1.csv)
 2. Etapa 2
-    - [CSV Etapa 2](exercicios/ExercicioEtapa2.csv)
+   - [CSV Etapa 2](exercicios/ExercicioEtapa2.csv)
+
 # Desafio
+
 O Desafio desta Sprint é uma normalização de tabela para um modelo relacional e uma modelagem Dimensional desta tabela (Como um Cubo de dados), portanto foi separado em dois arquivos `.sql` para melhor entendimento
-1. Modelo Relacional 
-    - [Script SQL]()
-    - [Imagem do Modelo]()
-2. Modelo Dimensional
-    - [Script SQL]()
-    - [Imagem do Modelo]()
 
 # Evidências
 
@@ -54,4 +52,4 @@ Modelo Relacional Logico da Base Loja
 # Certificados
 
 - Certificado do Curso ABC
-![Curso ABC](certificados/sample.png)
+  ![Curso ABC](certificados/sample.png)
