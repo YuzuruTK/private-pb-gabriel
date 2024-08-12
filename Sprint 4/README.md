@@ -1,32 +1,52 @@
-# Instruções
-
-Neste arquivo você irá apresentar suas entregas da Sprint corrente. Observe que existem 4 diretórios no exemplo: **exercícios**, **certificados** e **evidências**.
-
-- O diretório **exercícios** corresponde ao local onde você irá adicionar o código-fonte das atividades de codificação da Sprint, quando houver.
-- O diretório **evidências** você pode utilizar para adicionar imagens demonstrando a execução/resultados de atividades, quando necessário.
-- O diretório **certificados** é o local onde você irá armazenar os certificados dos cursos solicitados durante a sprint. O nome de cada certificado de corresponder ao título do curso.
-- O diretório **desafio** é o local onde você irá armazenar a resolução do que se pede no desafio, todos recursos que você considerar importante deverá está dentro desse diretório.
-
-Utilize o arquivo README.md da Sprint para organizar todas as suas entregas. Faça referência aos arquivos de código-fonte. Evite colocar código diretamente no Markdown pois dificulta nossa avaliação.
-
 # Desafio
 
-1. Codigo referente ao processamento de vendas ->
-   [Processamento de Vendas](Desafio/ecommerce/processamento_de_vendas.sh)
+1. Etapa 1
 
-2. Codigo referente ao consolidador de relatorios ->
-   [Consolidador de Relatorios.](exercicios/ex2.txt)
+   1. Arquivo de docker referente a criação da imagem -> [Dockerfile](Desafio/etapa1/dockerfile_carguru)
+   1. Arquivo referente ao script Python entregue pelo desafio -> [carguru](Desafio/etapa1/carguru.py)
 
-3. Caminho da entrega dos desafios -> [Ecommerce.](Desafio/ecommerce/)
+1. Etapa 2
+
+   - Markdown onde esta a resposta da pergunta da segunda etapa [Reiniciar Container](Desafio/README.md)
+   - [Script de exemplo](Desafio/etapa2/random_numbers.py)
+   - [Docker File de exemplo](Desafio/etapa2/dockerfile_random)
+
+1. Etapa 3
+
+   - Arquivo de docker referente a criação da imagem -> [Dockerfile](Desafio/etapa3/dockerfile_encrypting)
+   - Arquivo referente ao script Python desenvolvido para o Desafio -> [Encriptação](Desafio/etapa3/encrypting.py)
+
+1. Caminho da entrega do Desafio
+   - [Etapa 1.](Desafio/etapa1/)
+   - [Etapa 2.](Desafio/etapa2/)
+   - [Etapa 3.](Desafio/etapa3/)
+
+# Exercicios
+
+- [Exercício 1](exercicios/ex1.py)
+- [Exercício 2](exercicios/ex2.py)
+- [Exercício 3](exercicios/ex3.py)
+- [Exercício 4](exercicios/ex4.py)
+- [Exercício 5](exercicios/ex5.py)
+- [Exercício 6](exercicios/ex6.py)
+- [Exercício 7](exercicios/ex7.py)
 
 # Evidências
 
-- Na execucao do codigo criado durante o desafio nota-se que e necessario existir um csv dentro da pasta para a execucao
-
-  ![Evidencia 1](evidencias/evidencia2.png)
-
-- Para o script ser rodado todo dia foi necessario alterar o Crontab
-  ![Evidencia 1](evidencias/image.png)
+- Execução do Código do [Exercício 1](exercicios/ex1.py) <br>
+  ![Evidência do Exercício 1](evidencias/ex1.png)
+- Execução do Código do [Exercício 2](exercicios/ex2.py) <br>
+  ![Evidência do Exercício 2](evidencias/ex2.png)
+- Execução do Código do [Exercício 3](exercicios/ex3.py) <br>
+  ![Evidência do Exercício 3](evidencias/ex3.png)
+- Execução do Código do [Exercício 4](exercicios/ex4.py) <br>
+  ![Evidência do Exercício 4](evidencias/ex4.png)
+- Execução do Código do [Exercício 5](exercicios/ex5.py) <br>
+  ![Evidência do Exercício 5](evidencias/ex5.png)
+- Execução do Código do [Exercício 6](exercicios/ex6.py) <br>
+  ![Evidência do Exercício 6](evidencias/ex6.png)
+- Execução do Código do [Exercício 7](exercicios/ex7.py) <br>
+  ![Evidência do Exercício 7](evidencias/ex7.png)
 
 # Aprendizados
 
