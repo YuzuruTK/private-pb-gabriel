@@ -7,7 +7,3 @@ while True:
             print(hs.sha1(string=string.encode("utf-8")).hexdigest())
     except Exception as e:
         print(e)
-
-
-
-
