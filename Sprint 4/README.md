@@ -85,3 +85,7 @@ curtem na rede social, essa é uma das aplicações, poder compreender o comport
 #### Medidas de Assimetria
 
 #### Aplicações
+
+# Certificações
+
+![aws certificado](certificados/certificado.png)
