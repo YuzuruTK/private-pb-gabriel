@@ -1,0 +1,4 @@
+ipykernel
+pandas
+boto3
+tabulate
