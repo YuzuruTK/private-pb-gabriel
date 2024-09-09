@@ -5,6 +5,7 @@ import datetime
 # Constants of the project
 BUCKET_NAME = "data-lake-do-gabriel-buron"
 REGION_NAME = "us-east-2"
+
 with open("credentials", "r") as f:
     PROFILE = f.readline()[1:][:-2]
 date = datetime.datetime.now()
