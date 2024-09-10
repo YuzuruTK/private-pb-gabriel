@@ -1,0 +1,9 @@
+FROM python:latest
+
+COPY ./csvs/ ./desafio.py ./requirements.txt ./credentials ./
+
+RUN pip install -r requirements.txt
+RUN mkdir ~/.aws/
+RUN cp credentials ~/.aws/credentials
+
+CMD ["python", "desafio.py"]
