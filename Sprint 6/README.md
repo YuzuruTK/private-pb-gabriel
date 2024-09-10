@@ -44,6 +44,6 @@ e em seguida como pedido no exercicio foi feito uma consulta para retornar os 3 
 
 # Certificações
 
-Certificado Cloud Pratictioner
+Certificado de Nocoes Basicas de Analytics
 
-![Certificado](certificados/certificado_cloud.png)
+![Certificado](certificados/analytics-pt1.png)
