@@ -74,7 +74,7 @@ def request_movie_details():
     # Trowing the list to a JSON
     data = json.dumps({"movies" : movies},indent=4)
     # Putting the JSON on the bucket
-    s3.put_object(Bucket=BUCKET_NAME, Key=f"{JSON_PATH}/movie_details.json", Body=data)
+    s3.put_object(Bucket=BUCKET_NAME, Key=f"{JSON_PATH}/details/movie_details.json", Body=data)
     print("\nAll Movie Details get")
     
 
@@ -120,7 +120,7 @@ def request_movies_before_lotr():
             # Case there is already 100 registers on the memory it will create a JSON file on bucket and clear the list
             if registers >= 100:
                 data = json.dumps({"results" : movies},indent=4)
-                s3.put_object(Bucket=BUCKET_NAME, Key=f"{JSON_PATH}/movies_before_{files_id}.json", Body=data)
+                s3.put_object(Bucket=BUCKET_NAME, Key=f"{JSON_PATH}/movies/movies_before_{files_id}.json", Body=data)
                 files_id += 1
                 movies.clear()
                 registers = 0
@@ -140,7 +140,7 @@ def request_movies_before_lotr():
             movies.append(movie_info)
         # Put the rest of movies of the last page on a Json file
         data = json.dumps({"results" : movies},indent=4)
-        s3.put_object(Bucket=BUCKET_NAME, Key=f"{JSON_PATH}/movies_before_{files_id}.json", Body=data)
+        s3.put_object(Bucket=BUCKET_NAME, Key=f"{JSON_PATH}/movies/movies_before_{files_id}.json", Body=data)
         print(f"Requests made: {index} --- {time.time() - start_time:.2f} seconds passed", end="\r")
     print(f"\nRequest to get All Fantasy Movies before LOTR Done in {time.time() - start_time:.2f} seconds")
 
@@ -185,7 +185,7 @@ def request_movies_after_lotr():
             # Case there is already 100 registers on the memory it will create a JSON file on bucket and clear the list
             if registers >= 100:
                 data = json.dumps({"results" : movies},indent=4)
-                s3.put_object(Bucket=BUCKET_NAME, Key=f"{JSON_PATH}/movies_after_{files_id}.json", Body=data)
+                s3.put_object(Bucket=BUCKET_NAME, Key=f"{JSON_PATH}/movies/movies_after_{files_id}.json", Body=data)
                 files_id += 1
                 movies.clear()
                 registers = 0
@@ -205,7 +205,7 @@ def request_movies_after_lotr():
             movies.append(movie_info)
         # Put the rest of movies of the last page on a Json file
         data = json.dumps({"results" : movies},indent=4)
-        s3.put_object(Bucket=BUCKET_NAME, Key=f"{JSON_PATH}/movies_after_{files_id}.json", Body=data)
+        s3.put_object(Bucket=BUCKET_NAME, Key=f"{JSON_PATH}/movies/movies_after_{files_id}.json", Body=data)
         print(f"Requests made: {index} --- {time.time() - start_time:.2f} seconds passed", end="\r")
     print(f"\nRequest to get All Fantasy Movies after LOTR Done in {time.time() - start_time:.2f} seconds")
 
@@ -223,7 +223,7 @@ def get_all_keywords():
         # Case there is already 100 registers on the memory it will create a JSON file on bucket and clear the list
         if registers >= 100:
             data = json.dumps({"keywords" : keywords},indent=4)
-            s3.put_object(Bucket=BUCKET_NAME, Key=f"{JSON_PATH}/keywords_{index}.json", Body=data)
+            s3.put_object(Bucket=BUCKET_NAME, Key=f"{JSON_PATH}/keywords/keywords_{index}.json", Body=data)
             index += 1
             keywords.clear()
             registers = 0
@@ -235,7 +235,7 @@ def get_all_keywords():
         print(f"Requests made: {registers + (100*index)} --- {time.time() - start_time:.2f}", end="\r")
     # Put the rest of keywords of the last page on a Json file
     data = json.dumps({"keywords" : keywords},indent=4)
-    s3.put_object(Bucket=BUCKET_NAME, Key=f"{JSON_PATH}/keywords_{index}.json", Body=data)
+    s3.put_object(Bucket=BUCKET_NAME, Key=f"{JSON_PATH}/keywords/keywords_{index}.json", Body=data)
     print(f"\nKeywords Requests Done in {time.time() - start_time:.2f} seconds")
 
 
