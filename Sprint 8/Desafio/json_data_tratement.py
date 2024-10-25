@@ -58,6 +58,8 @@ glueContext.write_dynamic_frame.from_options(
 
 print("Parquet file with details created")
 
+# Getting the Movies Jsons
+
 input_dynamic_frame = glueContext.create_dynamic_frame.from_options(
     connection_type="s3", 
     connection_options={"paths": [INPUT_PATH+"movies/"]}, 
@@ -91,5 +93,36 @@ glueContext.write_dynamic_frame.from_options(
 )
 
 print("Parquet file created with all movies")
+
+# Getting the Keywords Jsons
+
+input_dynamic_frame = glueContext.create_dynamic_frame.from_options(
+    connection_type="s3", 
+    connection_options={"paths": [INPUT_PATH+"keywords/"]}, 
+    format="json", 
+    format_options={"multiline": True}
+)
+
+df = input_dynamic_frame.toDF()
+print("Dataframe Imported")
+
+# All Jsons Merged
+df = df.select(explode(col("keywords")).alias("movie"))
+
+df = df.select(
+    col("movie.id").alias("id"),
+    col("movie.keywords").alias("keywords"),
+)
+
+df_output = DynamicFrame.fromDF(df, glueContext, "output_dynamic_frame")
+
+glueContext.write_dynamic_frame.from_options(
+    frame = df_output,
+    connection_type = "s3",
+    connection_options = {"path": OUTPUT_PATH+f"TMDB/{date.year}/{date.month}/{date.day}/keywords/"},
+    format = "parquet"
+)
+
+print("Parquet file created with all good movies Keywords")
 
 job.commit()
