@@ -41,6 +41,7 @@ df = df.select(
     col("movie.vote_count").alias("vote_count"),
     col("movie.popularity").alias("popularity"),
     col("movie.genres").alias("genres"),
+    col("movie.keywords").alias("keywords"),
 )
 
 df = df.withColumn("genres", expr("transform(genres, x -> x.name)"))
