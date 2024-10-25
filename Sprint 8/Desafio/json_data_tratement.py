@@ -10,7 +10,7 @@ from awsglue.job import Job
 
 # Constants
 date = date.today()
-INPUT_PATH = "s3://data-lake-do-gabriel-buron/Raw/TMDB/JSON/2024/10/9/"
+INPUT_PATH = f"s3://data-lake-do-gabriel-buron/Raw/TMDB/JSON/{date.year}/{date.month}/{date.day}/"
 OUTPUT_PATH = "s3://data-lake-do-gabriel-buron/TRUSTED/"
 
 # Glue Settings
@@ -31,17 +31,19 @@ df = input_dynamic_frame.toDF()
 print("Dataframe Imported")
 
 df = df.select(explode(col("movies")).alias("movie"))
-df = df.withColumn("genres", expr("transform(movie.genres, x -> x.name)"))
 
-df = df.drop("movie.production_companies")
-df = df.drop("movie.homepage")
-df = df.drop("movie.belongs_to_collection")
-df = df.drop("movie.backdrop_path")
-df = df.drop("movie.poster_path")
-df = df.drop("movie.spoken_languages")
-df = df.drop("movie.production_countries")
-df = df.drop("movie.origin_country")
-df = df.drop("movie.adult")
+df = df.select(
+    col("movie.id").alias("id"),
+    col("movie.title").alias("title"),
+    col("movie.overview").alias("overview"),
+    col("movie.release_date").alias("release_date"),
+    col("movie.vote_average").alias("vote_average"),
+    col("movie.vote_count").alias("vote_count"),
+    col("movie.popularity").alias("popularity"),
+    col("movie.genres").alias("genres"),
+)
+
+df = df.withColumn("genres", expr("transform(genres, x -> x.name)"))
 
 # Convert back to DynamicFrame for AWS Glue write
 df_output = DynamicFrame.fromDF(df, glueContext, "output_dynamic_frame")
@@ -68,6 +70,16 @@ print("Dataframe Imported")
 
 # All Jsons Merged
 df = df.select(explode(col("results")).alias("movie"))
+
+df = df.select(
+    col("movie.id").alias("id"),
+    col("movie.overview").alias("overview"),
+    col("movie.popularity").alias("popularity"),
+    col("movie.title").alias("title"),
+    col("movie.vote_count").alias("vote_count"),
+    col("movie.vote_average").alias("vote_average"),
+    col("movie.release_date").alias("release_date"),
+)
 
 df_output = DynamicFrame.fromDF(df, glueContext, "output_dynamic_frame")
 
