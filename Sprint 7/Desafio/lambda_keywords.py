@@ -52,7 +52,7 @@ def get_all_keywords():
             registers = 0
         lista = [word["name"] for word in keywords_response.json()["keywords"]]
         if len(lista) != 0:
-            keywords.append({id : lista})
+            keywords.append({"id" : id,"keywords" : lista})
         print(f"Requests made: {registers + (100*index)} --- {time.time() - start_time:.2f}", end="\r")
     # Put the rest of keywords of the last page on a Json file
     data = json.dumps({"keywords" : keywords},indent=4)
