@@ -36,18 +36,23 @@ print("Dataframe Imported")
 # Data Tratement
 df = df.toDF(*(c.replace("|", "").replace(" ", "_") for c in df.columns))
 
-df = df.withColumn("anoLancamento", col("anoLancamento").cast(IntegerType()))
-df = df.withColumn("tempoMinutos", col("tempoMinutos").cast(IntegerType())) 
-df = df.withColumn("notaMedia", col("notaMedia").cast(FloatType())) 
-df = df.withColumn("numeroVotos", col("numeroVotos").cast(IntegerType()))
-df = df.withColumn("anoNascimento", col("anoNascimento").cast(IntegerType()))
-df = df.withColumn("anoFalecimento", col("anoFalecimento").cast(IntegerType()))
-
-df = df.withColumn("anoFalecimento", when(col("anoFalecimento").isNull(), 0).otherwise(col("anoFalecimento")))
-df = df.withColumn("tempoMinutos", when(col("tempoMinutos").isNull(), 0).otherwise(col("tempoMinutos")))
-
 df = df.filter((col("anoLancamento") > 1980) & (col("anoLancamento") <= 2020))
 df = df.filter((col("genero").contains("Fantasy")))
+
+df = df.drop("generoArtista")
+df = df.drop("personagem")
+df = df.drop("nomeArtista")
+df = df.drop("anoNascimento")
+df = df.drop("anoFalecimento")
+df = df.drop("profissao")
+df = df.drop("titulosMaisConhecidos")
+
+df = df.withColumn("anoLancamento", col("anoLancamento").cast(IntegerType()))
+df = df.withColumn("tempoMinutos", col("tempoMinutos").cast(IntegerType()))
+df = df.withColumn("notaMedia", col("notaMedia").cast(FloatType()))
+df = df.withColumn("numeroVotos", col("numeroVotos").cast(IntegerType()))
+
+df = df.withColumn("tempoMinutos", when(col("tempoMinutos").isNull(), 0).otherwise(col("tempoMinutos")))
 
 print("Dataframe cleaned")
 
